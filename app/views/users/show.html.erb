@@ -1,4 +1,9 @@
 <h1>WUT SHOW</h1>
 <%= @user.id %>
 <%= @user.username %>
-<%= @user.avatar %>
+<!-- <%= @user.avatar %> -->
+<%= image_tag(current_user.avatar.url(:thumb)) %>
+
+
+
+<%= link_to "Add Image", new_user_image_path(@user) %>

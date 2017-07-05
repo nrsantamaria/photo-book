@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   #   root to: "devise/sessions#new"
   # end
 
-  root to: 'images#index'
+  root to: 'home#index'
 
   resources :users do
     resources :images

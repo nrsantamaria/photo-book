@@ -1,3 +1,6 @@
 <h1>Hello!!</h1>
 
-<%= link_to "Sign In", new_user_registration_path %>
+Images will appear here:
+<% @images.each do |image| %>
+  <%= image_tag(image.avatar.url(:thumb)) %>
+<% end %>
