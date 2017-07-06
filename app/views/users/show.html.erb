@@ -5,5 +5,17 @@
 <%= image_tag(current_user.avatar.url(:thumb)) %>
 
 
+<hr>
+<%= link_to "Add Image to Flickr", new_user_image_path(@user) %>
+<hr>
+<h3>Images you have uploaded</h3>
 
-<%= link_to "Add Image", new_user_image_path(@user) %>
+<% @user.images.each do |image| %>
+
+  <%= link_to image_tag(image.avatar.url(:thumb)), image_path(image) %>
+  <br>
+  <%= image.name %>
+  <br>
+  <%= image.description %>
+  <hr>
+<% end %>
