@@ -14,26 +14,26 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-06T11:49:32-07:00">2017-07-06T11:49:32-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-06T11:53:43-07:00">2017-07-06T11:53:43-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">82.24%</span></span>
+    (<span class="covered_percent"><span class="yellow">82.58%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.88
+         0.9
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>41</b> files in total.
-    <b>304</b> relevant lines. 
-    <span class="green"><b>250</b> lines covered</span> and
+    <b>42</b> files in total.
+    <b>310</b> relevant lines. 
+    <span class="green"><b>256</b> lines covered</span> and
     <span class="red"><b>54</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -421,13 +421,23 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#b3d5479b33d2c99920a50c64cd48ad47618e5886" class="src_link" title="spec/models/comment_spec.rb">spec/models/comment_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.6</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#5c9959beb09f244aa021c9fd7fe061d7c174f5de" class="src_link" title="spec/models/image_spec.rb">spec/models/image_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>11</td>
-        <td>7</td>
-        <td>7</td>
+        <td>12</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -6513,13 +6523,74 @@
 </div>
 
       
+        <div class="source_table" id="b3d5479b33d2c99920a50c64cd48ad47618e5886">
+  <div class="header">
+    <h3>spec/models/comment_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Comment do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should belong_to :image }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of :author}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of :content}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="5c9959beb09f244aa021c9fd7fe061d7c174f5de">
   <div class="header">
     <h3>spec/models/image_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -6548,46 +6619,52 @@
         <li class="covered" data-hits="2" data-linenumber="4">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { should validate_presence_of :name}</code>
+          <code class="ruby">  it { should belong_to :user }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="5">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { should validate_presence_of :description}</code>
+          <code class="ruby">  it { should validate_presence_of :name}</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { should have_attached_file(:avatar) }</code>
+          <code class="ruby">  it { should validate_presence_of :description}</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="7">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { should validate_attachment_presence(:avatar) }</code>
+          <code class="ruby">  it { should have_attached_file(:avatar) }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="8">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { should validate_attachment_content_type(:avatar).</code>
+          <code class="ruby">  it { should validate_attachment_presence(:avatar) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">               allowing(&#39;image/png&#39;, &#39;image/gif&#39;).</code>
+          <code class="ruby">  it { should validate_attachment_content_type(:avatar).</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">               rejecting(&#39;text/plain&#39;, &#39;text/xml&#39;) }</code>
+          <code class="ruby">               allowing(&#39;image/png&#39;, &#39;image/gif&#39;).</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">               rejecting(&#39;text/plain&#39;, &#39;text/xml&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">end</code>

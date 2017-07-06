@@ -1036,10 +1036,20 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/photo-book/spec/models/comment_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null
+      ],
       "/Users/Guest/Desktop/photo-book/spec/models/image_spec.rb": [
         1,
         null,
         1,
+        2,
         2,
         2,
         2,
@@ -1065,6 +1075,6 @@
         null
       ]
     },
-    "timestamp": 1499366972
+    "timestamp": 1499367223
   }
 }
