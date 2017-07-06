@@ -2,5 +2,7 @@
 
 Images will appear here:
 <% @images.each do |image| %>
-  <%= image_tag(image.avatar.url(:thumb)) %>
+  <p><%= link_to image_tag(image.avatar.url(:medium)), user_path(image.user_id)  %></p>
+  <%= image.user_id %>
+  <h5><%= image.name %></h5>
 <% end %>
