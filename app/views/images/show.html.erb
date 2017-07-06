@@ -9,8 +9,19 @@
   <% @image.comments.each do |comment| %>
     <p><%= comment.author %></p>
     <p><%= comment.content %></p>
-    <br>
-    <hr>
+
+    <% if current_user && current_user.admin %>
+
+
+      <%= link_to "Edit Comment", edit_image_comment_path(@image, comment) %> |
+      <%= link_to "Delete this comment", image_comment_path(@image, comment),
+              :data => {:confirm => "Are you sure?",
+                :method => "delete"} %>
+
+      <% end %>
+
+  <br>
+  <hr>
   <% end %>
 <% else %>
 <p>There are no comments yet!</p>
