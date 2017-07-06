@@ -14,25 +14,20 @@
         <div class="navbar-header">
           <%= link_to 'Home', '/', {class: "navbar-brand"} %>
         </div>
-
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li><%= link_to current_user.email, user_path(current_user) %></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %></li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+          <% end %>
+        </ul>
       </div>
     </nav>
-    <% if current_user.try(:admin?) %>
-      <%= current_user.username %> THIS IS AN ADMIN
-    <% else %>
-      This user is not an admin
-    <% end %>
-
-    <% if current_user %>
-      <%= current_user.email %> | <%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %>
-    <% else %>
-      <%= link_to "Sign Up", new_user_registration_path %> | <%= link_to "Sign In", new_user_session_path %>
-    <% end %>
-
      <div class="container">
        <%= render 'layouts/messages' %>
        <%= yield %>
-
      </div>
   </body>
 </html>
