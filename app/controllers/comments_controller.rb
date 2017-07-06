@@ -1,6 +1,10 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!, :only => [:new]
 
+  before_action :only => [:edit] do
+    redirect_to '/' unless is_admin?
+  end
+
   def new
     @image = Image.find(params[:image_id])
     @comment = @image.comments.new

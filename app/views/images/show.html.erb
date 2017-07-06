@@ -10,7 +10,7 @@
     <p><%= comment.author %></p>
     <p><%= comment.content %></p>
 
-    <% if current_user && current_user.admin %>
+    <% if is_admin? %>
 
 
       <%= link_to "Edit Comment", edit_image_comment_path(@image, comment) %> |

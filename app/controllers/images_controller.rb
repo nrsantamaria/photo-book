@@ -1,5 +1,10 @@
 class ImagesController < ApplicationController
   before_action :authenticate_user!, :only => [:new]
+
+  before_action :only => [:edit] do
+    redirect_to '/' unless is_admin?
+  end
+
   def show
     @image = Image.find(params[:id])
   end

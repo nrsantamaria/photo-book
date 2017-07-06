@@ -18,6 +18,16 @@
   <br>
   <%= image.description %>
 
-  
+  <% if is_admin? %>
+
+
+    <%= link_to "Edit Image", edit_user_image_path(@user, image) %> |
+    <%= link_to "Delete this Image", user_image_path(@user, image),
+            :data => {:confirm => "Are you sure?",
+              :method => "delete"} %>
+
+    <% end %>
+
+
   <hr>
 <% end %>
