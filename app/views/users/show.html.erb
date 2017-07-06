@@ -18,7 +18,7 @@
   <br>
   <%= image.description %>
 
-  <% if is_admin? %>
+  <% if is_admin? || current_user.id == image.user_id %>
 
 
     <%= link_to "Edit Image", edit_user_image_path(@user, image) %> |

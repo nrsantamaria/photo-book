@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <%= link_to 'Home', '/', {class: "navbar-brand"} %>
+        </div>
+      </div>
+    </nav>
     <% if current_user.try(:admin?) %>
       <%= current_user.username %> THIS IS AN ADMIN
     <% else %>

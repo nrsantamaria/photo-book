@@ -2,7 +2,7 @@ class ImagesController < ApplicationController
   before_action :authenticate_user!, :only => [:new]
 
   before_action :only => [:edit] do
-    redirect_to '/' unless is_admin?
+    redirect_to '/' unless is_admin? || current_user.id == image.user_id
   end
 
   def show
